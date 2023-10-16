@@ -24,7 +24,7 @@ export class AuthController {
   ) {}
 
   @Post('sign-up')
-  @ApiOkResponse()
+  @ApiCreatedResponse()
   async signUp(
     @Body() body: SignUpBodyDto,
     @Res({ passthrough: true }) res: Response,
